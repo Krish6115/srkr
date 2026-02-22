@@ -149,7 +149,7 @@
             <div class="counter-icon">⚡</div>
             <div>
               <div class="counter-number">
-                <span data-count="200" data-suffix="+">0</span>+
+                <span data-count="250" data-suffix="+">0</span>+
               </div>
               <div class="counter-label">Algorithmic Challenges Solved</div>
               <div class="platforms-row">
@@ -239,38 +239,13 @@
           <line class="timeline-progress" id="timeline-progress" x1="8" y1="0" x2="8" y2="10000" />
         </svg>
 
-        <!-- Entry 1: CodVeda -->
-        <article class="timeline-entry" aria-label="CodVeda Technologies experience">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass-card">
-            <div class="timeline-meta">
-              <span class="tag tag-cyan">Internship</span>
-              <span class="timeline-period">2024</span>
-            </div>
-            <div class="timeline-org">CodVeda Technologies</div>
-            <div class="timeline-role">Java Application Developer Intern</div>
-            <ul class="timeline-bullets">
-              <li>Built a multi-threaded real-time chat application in Java with concurrent socket programming —
-                handling 50+ simultaneous connections.</li>
-              <li>Implemented an Employee Management System featuring CRUD operations, role-based access control, and
-                exportable reports.</li>
-              <li>Optimised thread pool management resulting in a notable reduction in server response latency.</li>
-            </ul>
-            <div class="timeline-badges">
-              <span class="tag tag-orange">Java</span>
-              <span class="tag tag-cyan">Multi-threading</span>
-              <span class="tag tag-purple">Socket Programming</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entry 2: AICTE & IBM -->
+        <!-- Entry 1: AICTE & IBM (most recent first) -->
         <article class="timeline-entry" aria-label="AICTE and IBM internship">
           <div class="timeline-dot"></div>
           <div class="timeline-card glass-card">
             <div class="timeline-meta">
-              <span class="tag tag-purple">Virtual Internship</span>
-              <span class="timeline-period">2024</span>
+              <span class="tag tag-purple">Remote Internship</span>
+              <span class="timeline-period">Aug 2025 – Oct 2025</span>
             </div>
             <div class="timeline-org">AICTE &amp; IBM</div>
             <div class="timeline-role">Web Development Intern</div>
@@ -288,6 +263,38 @@
               <span class="tag tag-orange">CSS3</span>
               <span class="tag tag-purple">JavaScript</span>
             </div>
+            <a href="https://github.com/Krish6115/IBM_AICTE" target="_blank" rel="noopener" class="cert-proof-btn">
+              <i class="fab fa-github"></i> View LOR / Certificate &rarr;
+            </a>
+          </div>
+        </article>
+
+        <!-- Entry 2: CodVeda -->
+        <article class="timeline-entry" aria-label="CodVeda Technologies experience">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-meta">
+              <span class="tag tag-cyan">Remote Internship</span>
+              <span class="timeline-period">Feb 2025 – Mar 2025</span>
+            </div>
+            <div class="timeline-org">CodVeda Technologies</div>
+            <div class="timeline-role">Java Application Developer Intern</div>
+            <ul class="timeline-bullets">
+              <li>Built a multi-threaded real-time chat application in Java with concurrent socket programming —
+                handling 50+ simultaneous connections.</li>
+              <li>Implemented an Employee Management System featuring CRUD operations, role-based access control, and
+                exportable reports.</li>
+              <li>Optimised thread pool management resulting in a notable reduction in server response latency.</li>
+            </ul>
+            <div class="timeline-badges">
+              <span class="tag tag-orange">Java</span>
+              <span class="tag tag-cyan">Multi-threading</span>
+              <span class="tag tag-purple">Socket Programming</span>
+            </div>
+            <a href="https://drive.google.com/file/d/1gABw2dlk7-B08TC72oEk1K5F/view?usp=sharing" target="_blank"
+              rel="noopener" class="cert-proof-btn">
+              <i class="fas fa-certificate"></i> View LOR / Certificate &rarr;
+            </a>
           </div>
         </article>
 
@@ -307,8 +314,8 @@
 
       <div class="projects-list">
 
-        <!-- ── Project 1: HealthGenie ── -->
-        <div class="project-block" data-project="healthgenie">
+        <!-- ── Project 1: AgriGuru (Crop Recommendation System) ── -->
+        <div class="project-block" data-project="agriguru">
           <div class="project-visual">
             <div class="project-browser-bar" aria-hidden="true">
               <div class="bbar-dot"></div>
@@ -316,13 +323,12 @@
               <div class="bbar-dot"></div>
               <div class="bbar-url"></div>
             </div>
-            <div class="project-screenshot-wrap" id="healthgenie-visual">
-              <!-- SWAP-IN POINT: Replace with <img src="assets/screenshots/healthgenie.png"> -->
+            <div class="project-screenshot-wrap" id="agriguru-visual">
               <div class="project-placeholder" style="padding-top:36px;">
-                <div class="ph-icon">🧬</div>
+                <div class="ph-icon">🌾</div>
                 <div class="ph-label">
-                  <strong style="color:#00f0ff;">HealthGenie</strong><br />
-                  <em>Drop screenshot as<br />assets/screenshots/healthgenie.png</em>
+                  <strong style="color:#39ff14;">AgriGuru</strong><br />
+                  <em>Drop screenshot as<br />assets/screenshots/agriguru.png</em>
                 </div>
               </div>
             </div>
@@ -330,34 +336,38 @@
           </div>
           <div class="project-info">
             <div class="project-number">01 / 04</div>
-            <h3 class="project-title gradient-text">HealthGenie</h3>
-            <div class="project-subtitle">Generative AI Health Assistant with RAG</div>
+            <h3 class="project-title gradient-text">AgriGuru</h3>
+            <div class="project-subtitle">Crop Recommendation System · ML, Random Forest · Nov 2025</div>
             <p class="project-description">
-              An AI-powered health assistant built on Retrieval-Augmented Generation (RAG) over
-              CDC datasets. Users get accurate, cited health guidance powered by a fine-tuned
-              LLM grounded in authoritative medical data.
+              A predictive analytics system achieving <strong>90% accuracy</strong> by implementing a
+              Random Forest classifier to analyse complex soil nutrient patterns (N, P, K). Integrated
+              third-party weather APIs to fetch real-time environmental data (temperature, rainfall,
+              humidity) for model inference.
             </p>
             <div class="project-highlights">
               <div class="project-highlight">
-                <div class="ph-dot"></div>RAG pipeline over CDC authoritative health data
+                <div class="ph-dot"></div>90% accuracy with Random Forest over soil NPK patterns
               </div>
               <div class="project-highlight">
-                <div class="ph-dot"></div>Generative AI responses with source citations
+                <div class="ph-dot"></div>Real-time weather API integration for live inference
               </div>
               <div class="project-highlight">
-                <div class="ph-dot"></div>Conversational interface with context retention
+                <div class="ph-dot"></div>Deployed & live at agriguru-gk9f.onrender.com
               </div>
             </div>
             <div class="project-stack">
-              <span class="tag tag-cyan">Python</span>
-              <span class="tag tag-purple">LangChain</span>
-              <span class="tag tag-green">RAG</span>
-              <span class="tag tag-orange">Streamlit</span>
-              <span class="tag tag-pink">GenAI</span>
+              <span class="tag tag-green">Python</span>
+              <span class="tag tag-cyan">Random Forest</span>
+              <span class="tag tag-orange">scikit-learn</span>
+              <span class="tag tag-purple">Weather API</span>
+              <span class="tag tag-pink">Flask</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+              <a href="https://github.com/Krish6115/AgriGuru" target="_blank" rel="noopener" class="btn btn-ghost">
                 <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://agriguru-gk9f.onrender.com/" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fas fa-external-link-alt"></i> Live
               </a>
             </div>
           </div>
@@ -411,7 +421,7 @@
               <span class="tag tag-pink">Gradio</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+              <a href="https://github.com/Krish6115/NNDL_PROJ" target="_blank" rel="noopener" class="btn btn-ghost">
                 <i class="fab fa-github"></i> Code
               </a>
             </div>
@@ -468,15 +478,19 @@
               <span class="tag tag-orange">FastAPI</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+              <a href="https://github.com/Krish6115/Doc_Assist" target="_blank" rel="noopener" class="btn btn-ghost">
                 <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://huggingface.co/spaces/RamJayadeep/MedBot-Clinical-RAG" target="_blank" rel="noopener"
+                class="btn btn-ghost">
+                <i class="fas fa-external-link-alt"></i> Live
               </a>
             </div>
           </div>
         </div>
 
-        <!-- ── Project 4: Twitter Emotion Detection ── -->
-        <div class="project-block" data-project="twitter">
+        <!-- ── Project 4: EmoSense ── -->
+        <div class="project-block" data-project="emosense">
           <div class="project-visual">
             <div class="project-browser-bar" aria-hidden="true">
               <div class="bbar-dot"></div>
@@ -484,12 +498,12 @@
               <div class="bbar-dot"></div>
               <div class="bbar-url"></div>
             </div>
-            <div class="project-screenshot-wrap" id="twitter-visual">
+            <div class="project-screenshot-wrap" id="emosense-visual">
               <div class="project-placeholder" style="padding-top:36px;">
-                <div class="ph-icon">🐦</div>
+                <div class="ph-icon">🧠</div>
                 <div class="ph-label">
-                  <strong style="color:#fb923c;">Twitter Emotion</strong><br />
-                  <em>Drop screenshot as<br />assets/screenshots/twitter_emotion.png</em>
+                  <strong style="color:#fb923c;">EmoSense</strong><br />
+                  <em>Drop screenshot as<br />assets/screenshots/emosense.png</em>
                 </div>
               </div>
             </div>
@@ -499,34 +513,37 @@
             <div class="project-number">04 / 04</div>
             <h3 class="project-title"
               style="background:linear-gradient(135deg,#fb923c,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
-              Twitter Emotion Detection</h3>
-            <div class="project-subtitle">RoBERTa · Real-Time Tweet Sentiment Pipeline</div>
+              EmoSense</h3>
+            <div class="project-subtitle">RoBERTa · Real-Time Tweet Emotion Pipeline</div>
             <p class="project-description">
               A real-time emotion detection system using a fine-tuned <strong>RoBERTa</strong> model
-              that fetches live tweets via the Twitter API, classifies emotions across 6 categories,
-              and visualises sentiment streams in an interactive dashboard.
+              that classifies emotions across 6 categories and visualises sentiment streams in an
+              interactive Streamlit dashboard.
             </p>
             <div class="project-highlights">
               <div class="project-highlight">
                 <div class="ph-dot"></div>Fine-tuned RoBERTa for 6-class emotion classification
               </div>
               <div class="project-highlight">
-                <div class="ph-dot"></div>Live Twitter API integration for real-time analysis
+                <div class="ph-dot"></div>Live Streamlit dashboard for real-time analysis
               </div>
               <div class="project-highlight">
-                <div class="ph-dot"></div>Interactive emotion trend visualisation dashboard
+                <div class="ph-dot"></div>Interactive emotion trend visualisation
               </div>
             </div>
             <div class="project-stack">
               <span class="tag tag-orange">Python</span>
               <span class="tag tag-cyan">RoBERTa</span>
               <span class="tag tag-purple">HuggingFace</span>
-              <span class="tag tag-green">Twitter API</span>
+              <span class="tag tag-green">Streamlit</span>
               <span class="tag tag-pink">NLP</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+              <a href="https://github.com/Krish6115/EmoSense" target="_blank" rel="noopener" class="btn btn-ghost">
                 <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://srkreddy-emosense.streamlit.app/" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fas fa-external-link-alt"></i> Live
               </a>
             </div>
           </div>
@@ -561,26 +578,26 @@
 
             <div class="hackathon-card">
               <div class="hc-icon">🇮🇳</div>
-              <div class="hc-name">Smart India Hackathon</div>
-              <div class="hc-result">National Finalist</div>
-            </div>
-
-            <div class="hackathon-card">
-              <div class="hc-icon">🤖</div>
-              <div class="hc-name">Kaggle × Google GenAI</div>
-              <div class="hc-result">Intensive Participant</div>
+              <div class="hc-name">Smart India Hackathon 2024</div>
+              <div class="hc-result">Campus Finalist</div>
             </div>
 
             <div class="hackathon-card">
               <div class="hc-icon">🎨</div>
-              <div class="hc-name">Adobe India Hackathon</div>
-              <div class="hc-result">Participant</div>
+              <div class="hc-name">Adobe India Hackathon 2025</div>
+              <div class="hc-result">Qualified — MCQs + Coding</div>
+            </div>
+
+            <div class="hackathon-card">
+              <div class="hc-icon">📊</div>
+              <div class="hc-name">Goldman Sachs Operations (Forage)</div>
+              <div class="hc-result">Job Simulation Complete</div>
             </div>
 
           </div>
         </div>
 
-        <!-- Certifications – flip cards -->
+        <!-- Certifications – flip cards (all 7, all clickable) -->
         <div>
           <div class="comp-col-title">📜 Certifications</div>
           <div class="certs-grid">
@@ -591,14 +608,53 @@
                   <div class="cert-front-logo">☁️</div>
                   <div>
                     <div class="cert-front-name">Oracle Cloud Gen AI Professional</div>
-                    <div class="cert-front-issuer">Oracle · 2024</div>
+                    <div class="cert-front-issuer">Oracle</div>
                   </div>
                 </div>
                 <div class="cert-back">
                   <div class="cert-back-title">Oracle Cloud Gen AI Professional</div>
-                  <div class="cert-back-desc">Covers OCI Generative AI service, LLM fundamentals, prompt engineering,
-                    and deploying generative AI solutions on Oracle Cloud Infrastructure.</div>
-                  <div class="cert-back-hint">Click to flip back ↩</div>
+                  <div class="cert-back-desc">OCI Generative AI service, LLM fundamentals, prompt engineering, and
+                    deploying GenAI on Oracle Cloud.</div>
+                  <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CE850DA8DF6C5FE82950CA94B515134960FC00A859E1555688723BA3639CA061"
+                    target="_blank" rel="noopener" class="cert-link-btn">View Badge &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-flip-card" title="Click to flip">
+              <div class="cert-flip-card-inner">
+                <div class="cert-front glass-card">
+                  <div class="cert-front-logo">🗄️</div>
+                  <div>
+                    <div class="cert-front-name">Oracle Cloud Data Science Professional</div>
+                    <div class="cert-front-issuer">Oracle · 2025</div>
+                  </div>
+                </div>
+                <div class="cert-back">
+                  <div class="cert-back-title">OCI 2025 Data Science Professional</div>
+                  <div class="cert-back-desc">Validates expertise in OCI Data Science service, model training,
+                    deployment, and ML pipelines.</div>
+                  <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=20F0D7E94E6E22D58DC7856EEF4CF1156ED5442248343A441879A65AF4650663"
+                    target="_blank" rel="noopener" class="cert-link-btn">View Badge &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-flip-card" title="Click to flip">
+              <div class="cert-flip-card-inner">
+                <div class="cert-front glass-card">
+                  <div class="cert-front-logo">🔷</div>
+                  <div>
+                    <div class="cert-front-name">Oracle APEX Cloud Developer</div>
+                    <div class="cert-front-issuer">Oracle</div>
+                  </div>
+                </div>
+                <div class="cert-back">
+                  <div class="cert-back-title">Oracle APEX Cloud Developer Certified Professional</div>
+                  <div class="cert-back-desc">Certified in building low-code enterprise applications with Oracle APEX on
+                    cloud infrastructure.</div>
+                  <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=C648D689FC584366B2F3D8AAA2FEC2AF03B14B39D61866E68B18DE7B925BF9B8"
+                    target="_blank" rel="noopener" class="cert-link-btn">View Badge &rarr;</a>
                 </div>
               </div>
             </div>
@@ -609,14 +665,15 @@
                   <div class="cert-front-logo">🧡</div>
                   <div>
                     <div class="cert-front-name">AWS Cloud Foundations</div>
-                    <div class="cert-front-issuer">Amazon Web Services · 2024</div>
+                    <div class="cert-front-issuer">Amazon Web Services</div>
                   </div>
                 </div>
                 <div class="cert-back">
-                  <div class="cert-back-title">AWS Cloud Foundations</div>
-                  <div class="cert-back-desc">Validates foundational understanding of AWS cloud concepts, services,
-                    security, architecture, pricing, and support.</div>
-                  <div class="cert-back-hint">Click to flip back ↩</div>
+                  <div class="cert-back-title">AWS Academy Graduate — Cloud Foundations</div>
+                  <div class="cert-back-desc">Foundational AWS cloud concepts, services, security, architecture,
+                    pricing, and support models.</div>
+                  <a href="https://www.credly.com/badges/2d99d1a4-7204-493e-961b-13e497c628b2/linked_in_profile"
+                    target="_blank" rel="noopener" class="cert-link-btn">View Badge &rarr;</a>
                 </div>
               </div>
             </div>
@@ -627,14 +684,53 @@
                   <div class="cert-front-logo">🎓</div>
                   <div>
                     <div class="cert-front-name">Stanford ML Specialisation</div>
-                    <div class="cert-front-issuer">Stanford / DeepLearning.AI · 2024</div>
+                    <div class="cert-front-issuer">Stanford / DeepLearning.AI</div>
                   </div>
                 </div>
                 <div class="cert-back">
-                  <div class="cert-back-title">Stanford Machine Learning</div>
-                  <div class="cert-back-desc">Andrew Ng's industry-standard course covering supervised/unsupervised
-                    learning, neural networks, decision trees, and ML system design best practices.</div>
-                  <div class="cert-back-hint">Click to flip back ↩</div>
+                  <div class="cert-back-title">Machine Learning by Stanford &amp; DeepLearning.ai</div>
+                  <div class="cert-back-desc">Andrew Ng's industry-standard ML course — supervised/unsupervised
+                    learning, neural networks, and ML system design.</div>
+                  <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/0RDLT8ZUDADM"
+                    target="_blank" rel="noopener" class="cert-link-btn">View Certificate &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-flip-card" title="Click to flip">
+              <div class="cert-flip-card-inner">
+                <div class="cert-front glass-card">
+                  <div class="cert-front-logo">🪟</div>
+                  <div>
+                    <div class="cert-front-name">Microsoft Career Essentials</div>
+                    <div class="cert-front-issuer">Microsoft / LinkedIn</div>
+                  </div>
+                </div>
+                <div class="cert-back">
+                  <div class="cert-back-title">Microsoft Career Essentials in Software Development</div>
+                  <div class="cert-back-desc">Software development fundamentals and career readiness with Microsoft
+                    tooling and practices.</div>
+                  <a href="https://www.linkedin.com/learning/certificates/87e0775095b03a6c531fdfdca7ef9954e051c96548a03baba80b1ec9a5f86e30"
+                    target="_blank" rel="noopener" class="cert-link-btn">View Certificate &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-flip-card" title="Click to flip">
+              <div class="cert-flip-card-inner">
+                <div class="cert-front glass-card">
+                  <div class="cert-front-logo">⚛️</div>
+                  <div>
+                    <div class="cert-front-name">MERN Fullstack Guide</div>
+                    <div class="cert-front-issuer">Udemy</div>
+                  </div>
+                </div>
+                <div class="cert-back">
+                  <div class="cert-back-title">The MERN Fullstack Guide</div>
+                  <div class="cert-back-desc">Complete MERN stack development — MongoDB, Express, React, Node.js with
+                    real-world project builds.</div>
+                  <a href="https://www.udemy.com/certificate/UC-96a053d6-bc41-4b4a-b60b-dc7897da7b90/" target="_blank"
+                    rel="noopener" class="cert-link-btn">View Certificate &rarr;</a>
                 </div>
               </div>
             </div>
@@ -740,6 +836,53 @@
                 <span class="tag tag-pink">JS</span>
                 <span class="tag tag-green">GSAP</span>
               </div>
+            </div>
+          </div>
+
+          <!-- HealthGenie -->
+          <div class="passion-card">
+            <div class="passion-card-visual">
+              <div class="passion-placeholder">
+                <div class="pp-icon">🧬</div>
+                <span>HealthGenie<br /><em style="font-size:0.7rem;">assets/screenshots/healthgenie.png</em></span>
+              </div>
+              <span class="passion-category tag tag-pink">GenAI</span>
+            </div>
+            <div class="passion-card-body">
+              <div class="passion-card-title">HealthGenie</div>
+              <div class="passion-card-desc">An AI-powered health assistant built on RAG over CDC datasets — users get
+                accurate, cited health guidance from a fine-tuned LLM grounded in authoritative medical data.</div>
+              <div class="passion-card-stack">
+                <span class="tag tag-cyan">Python</span>
+                <span class="tag tag-purple">LangChain</span>
+                <span class="tag tag-green">RAG</span>
+                <span class="tag tag-orange">Streamlit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- This Portfolio -->
+          <div class="passion-card">
+            <div class="passion-card-visual">
+              <div class="passion-placeholder">
+                <div class="pp-icon">🕷️</div>
+                <span>This Portfolio<br /><em style="font-size:0.7rem;">krish6115.github.io/srkr</em></span>
+              </div>
+              <span class="passion-category tag tag-green">Personal</span>
+            </div>
+            <div class="passion-card-body">
+              <div class="passion-card-title">This Portfolio</div>
+              <div class="passion-card-desc">A VS Code-themed dark portfolio with a decode/scramble animation, matrix
+                green spider cursor, and a full 7-section layout built in vanilla HTML/CSS/JS.</div>
+              <div class="passion-card-stack">
+                <span class="tag tag-green">HTML/CSS</span>
+                <span class="tag tag-orange">Vanilla JS</span>
+                <span class="tag tag-cyan">Canvas API</span>
+              </div>
+              <a href="https://krish6115.github.io/srkr" target="_blank" rel="noopener" class="cert-proof-btn"
+                style="margin-top:8px;">
+                <i class="fas fa-external-link-alt"></i> View Live &rarr;
+              </a>
             </div>
           </div>
 
