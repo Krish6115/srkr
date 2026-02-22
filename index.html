@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krish6115 – Siva Rama Krishna Reddy Padala | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Siva Rama Krishna Reddy Padala (Krish6115) – Full-Stack Developer, AI/ML Engineer & Generative AI Builder. CS student at Amrita Vishwa Vidyapeetham." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Icons: Devicons + Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/competitive.css" />
+  <link rel="stylesheet" href="css/passion.css" />
+  <link rel="stylesheet" href="css/terminal.css" />
+
+  <!-- VanillaTilt (for 3D card hover) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo">&lt;<span>Krish</span>6115 /&gt;</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#competitive">Achievements</a></li>
+      <li><a href="#passion">More</a></li>
+      <li><a href="#terminal-footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 1 – HERO
+  ════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+
+    <!-- Ambient orbs -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+
+      <!-- Status badge — fades in after decode -->
+      <div class="hero-badge" id="hero-badge" style="opacity:0;transition:opacity 0.8s ease;">
+        <span class="dot"></span>
+        Open to Opportunities &nbsp;·&nbsp; B.Tech CS @ Amrita
+      </div>
+
+      <!-- ════ DECODE ANIMATION TARGETS ════ -->
+      <!-- hero.js populates these with the scramble/reveal animation -->
+      <h1 class="hero-name" aria-label="Siva Rama Krishna Reddy Padala">
+        <div id="hero-decode-line1" class="hero-decode-name gradient-text"></div>
+        <div id="hero-decode-line2" class="hero-decode-handle"></div>
+      </h1>
+
+      <!-- Typewriter tagline — fades in after decode -->
+      <p class="hero-tagline" id="hero-tagline-wrap" style="opacity:0;transition:opacity 0.8s ease 0.2s;">
+        Specialising in&nbsp;
+        <span class="typewriter-text" id="typewriter-text"></span><span class="typewriter-cursor"
+          aria-hidden="true"></span>
+      </p>
+
+      <!-- CTA — fades in after decode -->
+      <div class="hero-cta-row" id="hero-cta-row" style="opacity:0;transition:opacity 0.8s ease 0.4s;">
+        <a href="#projects" class="btn-hero-primary" id="explore-btn">
+          <div class="btn-glow" aria-hidden="true"></div>
+          <div class="btn-bg" aria-hidden="true"></div>
+          <span>Explore My Work</span>
+          <span>↓</span>
+        </a>
+        <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse">
+        <div class="scroll-mouse-wheel"></div>
+      </div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <div class="glow-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 2 – ABOUT & SKILLS ARSENAL
+  ════════════════════════════════════════════════ -->
+  <section id="about" aria-label="About me and skills">
+    <div class="container">
+      <div class="section-label">01 &mdash; About</div>
+      <h2 class="section-title">The Human Behind <span class="gradient-text">The Code</span></h2>
+
+      <div class="about-grid">
+
+        <!-- Profile & bio -->
+        <div class="about-profile">
+          <!-- Profile image -->
+          <div class="profile-image-wrapper"
+            style="opacity:0;transform:scale(0.8);transition:opacity 0.8s ease,transform 0.8s ease;"
+            id="profile-wrapper">
+            <div class="profile-ring" aria-hidden="true"></div>
+            <div class="profile-ring-inner" aria-hidden="true"></div>
+            <img src="assets/images/avatar.png" alt="Siva Rama Krishna Reddy Padala – anonymous coder avatar"
+              class="profile-img" id="profile-img" />
+          </div>
+
+          <!-- Bio text -->
+          <div class="about-bio">
+            <h3>Siva Rama Krishna Reddy Padala</h3>
+            <p class="university">
+              <i class="fas fa-graduation-cap"></i>
+              B.Tech Computer Science &middot; Amrita Vishwa Vidyapeetham
+            </p>
+            <p>
+              I'm a CS student passionate about building things that sit at the intersection of
+              <strong>full-stack engineering</strong>, <strong>AI/ML</strong>, and
+              <strong>Generative AI</strong>. Whether it's spinning up a RAG pipeline over clinical data,
+              training a custom vision model, or crafting a sleek Flutter UI — I like shipping products
+              that feel as good as they work.
+            </p>
+          </div>
+
+          <!-- Counter -->
+          <div class="counter-card">
+            <div class="counter-icon">⚡</div>
+            <div>
+              <div class="counter-number">
+                <span data-count="200" data-suffix="+">0</span>+
+              </div>
+              <div class="counter-label">Algorithmic Challenges Solved</div>
+              <div class="platforms-row">
+                <span class="tag tag-orange">LeetCode</span>
+                <span class="tag tag-green">GFG</span>
+                <span class="tag tag-cyan">CodeForces</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills grid -->
+        <div class="skills-grid" id="skills-grid">
+
+          <div class="skill-category">
+            <div class="skill-category-label">Languages</div>
+            <div class="skill-icons">
+              <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+              <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+              <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+              <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+              <div class="skill-item"><i class="devicon-dart-plain colored"></i><span>Dart</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-label">Frontend & Mobile</div>
+            <div class="skill-icons">
+              <div class="skill-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+              <div class="skill-item"><i class="devicon-flutter-plain colored"></i><span>Flutter</span></div>
+              <div class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+              <div class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-label">AI / ML / GenAI</div>
+            <div class="skill-icons">
+              <div class="skill-item"><i class="devicon-pytorch-plain colored"></i><span>PyTorch</span></div>
+              <div class="skill-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+              <div class="skill-item"><i class="devicon-scikitlearn-plain colored"></i><span>Sklearn</span></div>
+              <div class="skill-item" title="LangChain"><i class="fas fa-link"
+                  style="color:#00f0ff;font-size:1.8rem;"></i><span>LangChain</span></div>
+              <div class="skill-item" title="Hugging Face"><i class="fas fa-robot"
+                  style="color:#f0b90b;font-size:1.8rem;"></i><span>HF</span></div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-label">Cloud & Backend</div>
+            <div class="skill-icons">
+              <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span>
+              </div>
+              <div class="skill-item"><i class="devicon-spring-plain colored"></i><span>Spring</span></div>
+              <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+              <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+              <div class="skill-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 3 – EXPERIENCE TIMELINE
+  ════════════════════════════════════════════════ -->
+  <section id="experience" aria-label="Work experience">
+    <div class="container">
+      <div class="section-label">02 &mdash; Experience</div>
+      <h2 class="section-title">Where I've <span class="gradient-text">Shipped</span></h2>
+
+      <div class="timeline-wrapper">
+
+        <!-- SVG timeline line -->
+        <svg class="timeline-svg" aria-hidden="true" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="timelineGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#39ff14" />
+              <stop offset="100%" stop-color="#4ec9b0" />
+            </linearGradient>
+          </defs>
+          <line class="timeline-track" x1="8" y1="0" x2="8" y2="10000" />
+          <line class="timeline-progress" id="timeline-progress" x1="8" y1="0" x2="8" y2="10000" />
+        </svg>
+
+        <!-- Entry 1: CodVeda -->
+        <article class="timeline-entry" aria-label="CodVeda Technologies experience">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-meta">
+              <span class="tag tag-cyan">Internship</span>
+              <span class="timeline-period">2024</span>
+            </div>
+            <div class="timeline-org">CodVeda Technologies</div>
+            <div class="timeline-role">Java Application Developer Intern</div>
+            <ul class="timeline-bullets">
+              <li>Built a multi-threaded real-time chat application in Java with concurrent socket programming —
+                handling 50+ simultaneous connections.</li>
+              <li>Implemented an Employee Management System featuring CRUD operations, role-based access control, and
+                exportable reports.</li>
+              <li>Optimised thread pool management resulting in a notable reduction in server response latency.</li>
+            </ul>
+            <div class="timeline-badges">
+              <span class="tag tag-orange">Java</span>
+              <span class="tag tag-cyan">Multi-threading</span>
+              <span class="tag tag-purple">Socket Programming</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Entry 2: AICTE & IBM -->
+        <article class="timeline-entry" aria-label="AICTE and IBM internship">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-meta">
+              <span class="tag tag-purple">Virtual Internship</span>
+              <span class="timeline-period">2024</span>
+            </div>
+            <div class="timeline-org">AICTE &amp; IBM</div>
+            <div class="timeline-role">Web Development Intern</div>
+            <ul class="timeline-bullets">
+              <li>Completed the <em>Web Development Fundamentals</em> programme, earning the official IBM digital badge.
+              </li>
+              <li>Deployed a front-end portfolio project demonstrating responsive design and accessibility best
+                practices.</li>
+              <li>Gained hands-on exposure to HTML5, CSS3, JavaScript, and developer tooling through structured IBM
+                coursework.</li>
+            </ul>
+            <div class="timeline-badges">
+              <span class="tag tag-green">IBM Badge</span>
+              <span class="tag tag-cyan">HTML5</span>
+              <span class="tag tag-orange">CSS3</span>
+              <span class="tag tag-purple">JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 4 – FEATURED PROJECTS
+  ════════════════════════════════════════════════ -->
+  <section id="projects" aria-label="Featured engineering projects">
+    <div class="container">
+      <div class="section-label">03 &mdash; Featured Engineering</div>
+      <h2 class="section-title">The <span class="gradient-text">Heavy Hitters</span></h2>
+
+      <div class="projects-list">
+
+        <!-- ── Project 1: HealthGenie ── -->
+        <div class="project-block" data-project="healthgenie">
+          <div class="project-visual">
+            <div class="project-browser-bar" aria-hidden="true">
+              <div class="bbar-dot"></div>
+              <div class="bbar-dot"></div>
+              <div class="bbar-dot"></div>
+              <div class="bbar-url"></div>
+            </div>
+            <div class="project-screenshot-wrap" id="healthgenie-visual">
+              <!-- SWAP-IN POINT: Replace with <img src="assets/screenshots/healthgenie.png"> -->
+              <div class="project-placeholder" style="padding-top:36px;">
+                <div class="ph-icon">🧬</div>
+                <div class="ph-label">
+                  <strong style="color:#00f0ff;">HealthGenie</strong><br />
+                  <em>Drop screenshot as<br />assets/screenshots/healthgenie.png</em>
+                </div>
+              </div>
+            </div>
+            <span class="swap-in-label">📸 SWAP-IN</span>
+          </div>
+          <div class="project-info">
+            <div class="project-number">01 / 04</div>
+            <h3 class="project-title gradient-text">HealthGenie</h3>
+            <div class="project-subtitle">Generative AI Health Assistant with RAG</div>
+            <p class="project-description">
+              An AI-powered health assistant built on Retrieval-Augmented Generation (RAG) over
+              CDC datasets. Users get accurate, cited health guidance powered by a fine-tuned
+              LLM grounded in authoritative medical data.
+            </p>
+            <div class="project-highlights">
+              <div class="project-highlight">
+                <div class="ph-dot"></div>RAG pipeline over CDC authoritative health data
+              </div>
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Generative AI responses with source citations
+              </div>
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Conversational interface with context retention
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tag tag-cyan">Python</span>
+              <span class="tag tag-purple">LangChain</span>
+              <span class="tag tag-green">RAG</span>
+              <span class="tag tag-orange">Streamlit</span>
+              <span class="tag tag-pink">GenAI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 2: AgriScan AI ── -->
+        <div class="project-block" data-project="agriscan">
+          <div class="project-visual">
+            <div class="project-browser-bar" aria-hidden="true">
+              <div class="bbar-dot"></div>
+              <div class="bbar-dot"></div>
+              <div class="bbar-dot"></div>
+              <div class="bbar-url"></div>
+            </div>
+            <div class="project-screenshot-wrap" id="agriscan-visual">
+              <div class="project-placeholder" style="padding-top:36px;">
+                <div class="ph-icon">🌿</div>
+                <div class="ph-label">
+                  <strong style="color:#4ade80;">AgriScan AI</strong><br />
+                  <em>Drop screenshot as<br />assets/screenshots/agriscan.png</em>
+                </div>
+              </div>
+            </div>
+            <span class="swap-in-label">📸 SWAP-IN</span>
+          </div>
+          <div class="project-info">
+            <div class="project-number">02 / 04</div>
+            <h3 class="project-title gradient-text-green">AgriScan AI</h3>
+            <div class="project-subtitle">Hybrid ConvNeXt + ViT Crop Disease Detector</div>
+            <p class="project-description">
+              A hybrid deep learning system combining <strong>ConvNeXt</strong> for local texture
+              features and <strong>Vision Transformer (ViT)</strong> for global context — delivering
+              state-of-the-art crop disease classification served through a Gradio web interface.
+            </p>
+            <div class="project-highlights">
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Hybrid ConvNeXt + ViT architecture for superior accuracy
+              </div>
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Real-time inference via Gradio web interface
+              </div>
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Trained on 50k+ annotated crop disease images
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tag tag-cyan">Python</span>
+              <span class="tag tag-orange">PyTorch</span>
+              <span class="tag tag-green">ViT</span>
+              <span class="tag tag-purple">ConvNeXt</span>
+              <span class="tag tag-pink">Gradio</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 3: DoctorAssist ── -->
+        <div class="project-block" data-project="doctorassist">
+          <div class="project-visual">
+            <div class="project-browser-bar" aria-hidden="true">
+              <div class="bbar-dot"></div>
+              <div class="bbar-dot"></div>
+              <div class="bbar-dot"></div>
+              <div class="bbar-url"></div>
+            </div>
+            <div class="project-screenshot-wrap" id="doctorassist-visual">
+              <div class="project-placeholder" style="padding-top:36px;">
+                <div class="ph-icon">🩺</div>
+                <div class="ph-label">
+                  <strong style="color:#a855f7;">DoctorAssist</strong><br />
+                  <em>Drop screenshot as<br />assets/screenshots/doctorassist.png</em>
+                </div>
+              </div>
+            </div>
+            <span class="swap-in-label">📸 SWAP-IN</span>
+          </div>
+          <div class="project-info">
+            <div class="project-number">03 / 04</div>
+            <h3 class="project-title"
+              style="background:linear-gradient(135deg,#a855f7,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+              DoctorAssist</h3>
+            <div class="project-subtitle">Clinical RAG System · 25% Query Time Reduction</div>
+            <p class="project-description">
+              A clinical-grade RAG system designed to help healthcare professionals retrieve precise
+              medical information rapidly. The semantic retrieval pipeline cut average query response
+              time by <strong>25%</strong> compared to keyword-search baselines.
+            </p>
+            <div class="project-highlights">
+              <div class="project-highlight">
+                <div class="ph-dot"></div>25% reduction in clinical query response time
+              </div>
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Semantic vector search over medical literature
+              </div>
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Designed for accuracy-critical clinical environments
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tag tag-purple">Python</span>
+              <span class="tag tag-cyan">LangChain</span>
+              <span class="tag tag-green">FAISS</span>
+              <span class="tag tag-pink">RAG</span>
+              <span class="tag tag-orange">FastAPI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 4: Twitter Emotion Detection ── -->
+        <div class="project-block" data-project="twitter">
+          <div class="project-visual">
+            <div class="project-browser-bar" aria-hidden="true">
+              <div class="bbar-dot"></div>
+              <div class="bbar-dot"></div>
+              <div class="bbar-dot"></div>
+              <div class="bbar-url"></div>
+            </div>
+            <div class="project-screenshot-wrap" id="twitter-visual">
+              <div class="project-placeholder" style="padding-top:36px;">
+                <div class="ph-icon">🐦</div>
+                <div class="ph-label">
+                  <strong style="color:#fb923c;">Twitter Emotion</strong><br />
+                  <em>Drop screenshot as<br />assets/screenshots/twitter_emotion.png</em>
+                </div>
+              </div>
+            </div>
+            <span class="swap-in-label">📸 SWAP-IN</span>
+          </div>
+          <div class="project-info">
+            <div class="project-number">04 / 04</div>
+            <h3 class="project-title"
+              style="background:linear-gradient(135deg,#fb923c,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+              Twitter Emotion Detection</h3>
+            <div class="project-subtitle">RoBERTa · Real-Time Tweet Sentiment Pipeline</div>
+            <p class="project-description">
+              A real-time emotion detection system using a fine-tuned <strong>RoBERTa</strong> model
+              that fetches live tweets via the Twitter API, classifies emotions across 6 categories,
+              and visualises sentiment streams in an interactive dashboard.
+            </p>
+            <div class="project-highlights">
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Fine-tuned RoBERTa for 6-class emotion classification
+              </div>
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Live Twitter API integration for real-time analysis
+              </div>
+              <div class="project-highlight">
+                <div class="ph-dot"></div>Interactive emotion trend visualisation dashboard
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tag tag-orange">Python</span>
+              <span class="tag tag-cyan">RoBERTa</span>
+              <span class="tag tag-purple">HuggingFace</span>
+              <span class="tag tag-green">Twitter API</span>
+              <span class="tag tag-pink">NLP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Krish6115" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-list -->
+    </div>
+  </section>
+
+  <div class="glow-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 5 – COMPETITIVE EDGE
+  ════════════════════════════════════════════════ -->
+  <section id="competitive" aria-label="Hackathons and certifications">
+    <div class="container">
+      <div class="section-label">04 &mdash; Competitive Edge</div>
+      <h2 class="section-title">Hackathons &amp; <span class="gradient-text">Credentials</span></h2>
+
+      <div class="competitive-grid">
+
+        <!-- Hackathons -->
+        <div>
+          <div class="comp-col-title">🏆 Hackathon Battle Record</div>
+          <div class="hackathon-grid">
+
+            <div class="hackathon-card">
+              <div class="hc-icon">🌐</div>
+              <div class="hc-name">Infosys Global Hackathon</div>
+              <div class="hc-result">Top 20 Worldwide</div>
+            </div>
+
+            <div class="hackathon-card">
+              <div class="hc-icon">🇮🇳</div>
+              <div class="hc-name">Smart India Hackathon</div>
+              <div class="hc-result">National Finalist</div>
+            </div>
+
+            <div class="hackathon-card">
+              <div class="hc-icon">🤖</div>
+              <div class="hc-name">Kaggle × Google GenAI</div>
+              <div class="hc-result">Intensive Participant</div>
+            </div>
+
+            <div class="hackathon-card">
+              <div class="hc-icon">🎨</div>
+              <div class="hc-name">Adobe India Hackathon</div>
+              <div class="hc-result">Participant</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Certifications – flip cards -->
+        <div>
+          <div class="comp-col-title">📜 Certifications</div>
+          <div class="certs-grid">
+
+            <div class="cert-flip-card" title="Click to flip">
+              <div class="cert-flip-card-inner">
+                <div class="cert-front glass-card">
+                  <div class="cert-front-logo">☁️</div>
+                  <div>
+                    <div class="cert-front-name">Oracle Cloud Gen AI Professional</div>
+                    <div class="cert-front-issuer">Oracle · 2024</div>
+                  </div>
+                </div>
+                <div class="cert-back">
+                  <div class="cert-back-title">Oracle Cloud Gen AI Professional</div>
+                  <div class="cert-back-desc">Covers OCI Generative AI service, LLM fundamentals, prompt engineering,
+                    and deploying generative AI solutions on Oracle Cloud Infrastructure.</div>
+                  <div class="cert-back-hint">Click to flip back ↩</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-flip-card" title="Click to flip">
+              <div class="cert-flip-card-inner">
+                <div class="cert-front glass-card">
+                  <div class="cert-front-logo">🧡</div>
+                  <div>
+                    <div class="cert-front-name">AWS Cloud Foundations</div>
+                    <div class="cert-front-issuer">Amazon Web Services · 2024</div>
+                  </div>
+                </div>
+                <div class="cert-back">
+                  <div class="cert-back-title">AWS Cloud Foundations</div>
+                  <div class="cert-back-desc">Validates foundational understanding of AWS cloud concepts, services,
+                    security, architecture, pricing, and support.</div>
+                  <div class="cert-back-hint">Click to flip back ↩</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-flip-card" title="Click to flip">
+              <div class="cert-flip-card-inner">
+                <div class="cert-front glass-card">
+                  <div class="cert-front-logo">🎓</div>
+                  <div>
+                    <div class="cert-front-name">Stanford ML Specialisation</div>
+                    <div class="cert-front-issuer">Stanford / DeepLearning.AI · 2024</div>
+                  </div>
+                </div>
+                <div class="cert-back">
+                  <div class="cert-back-title">Stanford Machine Learning</div>
+                  <div class="cert-back-desc">Andrew Ng's industry-standard course covering supervised/unsupervised
+                    learning, neural networks, decision trees, and ML system design best practices.</div>
+                  <div class="cert-back-hint">Click to flip back ↩</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 6 – PASSION PROJECTS & CLIENT WORK
+  ════════════════════════════════════════════════ -->
+  <section id="passion" aria-label="Passion projects and client work">
+    <div class="container">
+      <div class="section-label">05 &mdash; Passion &amp; Client Work</div>
+      <h2 class="section-title">More <span class="gradient-text">Things I've Built</span></h2>
+
+      <div class="carousel-container">
+        <div class="carousel-track" id="carousel-track">
+
+          <!-- Zipkar UI -->
+          <div class="passion-card">
+            <div class="passion-card-visual">
+              <div class="passion-placeholder">
+                <div class="pp-icon">🚗</div>
+                <span>Zipkar UI<br /><em style="font-size:0.7rem;">assets/screenshots/zipkar.png</em></span>
+              </div>
+              <span class="passion-category tag tag-cyan">Flutter</span>
+            </div>
+            <div class="passion-card-body">
+              <div class="passion-card-title">Zipkar UI</div>
+              <div class="passion-card-desc">A sleek Flutter UI for a ride-sharing app concept featuring smooth
+                animations, real-time map integration, and material 3 design language.</div>
+              <div class="passion-card-stack">
+                <span class="tag tag-cyan">Flutter</span>
+                <span class="tag tag-purple">Dart</span>
+                <span class="tag tag-green">Maps API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flutter Todo App -->
+          <div class="passion-card">
+            <div class="passion-card-visual">
+              <div class="passion-placeholder">
+                <div class="pp-icon">✅</div>
+                <span>Flutter Todo<br /><em style="font-size:0.7rem;">assets/screenshots/todo.png</em></span>
+              </div>
+              <span class="passion-category tag tag-purple">Flutter</span>
+            </div>
+            <div class="passion-card-body">
+              <div class="passion-card-title">Flutter Todo App</div>
+              <div class="passion-card-desc">A clean, animated task management app built in Flutter with local
+                persistence, swipe gestures, and dark-mode support.</div>
+              <div class="passion-card-stack">
+                <span class="tag tag-purple">Flutter</span>
+                <span class="tag tag-cyan">Dart</span>
+                <span class="tag tag-orange">SQLite</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AlwaysVK Anniversary Site -->
+          <div class="passion-card">
+            <div class="passion-card-visual">
+              <div class="passion-placeholder">
+                <div class="pp-icon">💖</div>
+                <span>AlwaysVK<br /><em style="font-size:0.7rem;">assets/screenshots/alwaysvk.png</em></span>
+              </div>
+              <span class="passion-category tag tag-pink">Client</span>
+            </div>
+            <div class="passion-card-body">
+              <div class="passion-card-title">AlwaysVK Anniversary Site</div>
+              <div class="passion-card-desc">A bespoke animated anniversary gift website with a custom particle heart
+                animation, photo timeline, and personalised music player.</div>
+              <div class="passion-card-stack">
+                <span class="tag tag-pink">HTML/CSS</span>
+                <span class="tag tag-orange">JS</span>
+                <span class="tag tag-cyan">Canvas API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HBAP Birthday Wisher -->
+          <div class="passion-card">
+            <div class="passion-card-visual">
+              <div class="passion-placeholder">
+                <div class="pp-icon">🎂</div>
+                <span>HBAP Birthday<br /><em style="font-size:0.7rem;">assets/screenshots/hbap.png</em></span>
+              </div>
+              <span class="passion-category tag tag-orange">Client</span>
+            </div>
+            <div class="passion-card-body">
+              <div class="passion-card-title">HBAP Birthday Wisher</div>
+              <div class="passion-card-desc">An interactive birthday celebration web experience featuring animated
+                confetti, personalised messages, and a countdown timer.</div>
+              <div class="passion-card-stack">
+                <span class="tag tag-orange">HTML/CSS</span>
+                <span class="tag tag-pink">JS</span>
+                <span class="tag tag-green">GSAP</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /carousel-track -->
+
+        <!-- Navigation -->
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="carousel-prev" aria-label="Previous projects">‹</button>
+          <button class="carousel-btn" id="carousel-next" aria-label="Next projects">›</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="glow-divider" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 7 – TERMINAL FOOTER (CONTACT)
+  ════════════════════════════════════════════════ -->
+  <section id="terminal-footer" aria-label="Contact information">
+    <div class="container">
+      <div class="section-label">06 &mdash; Contact</div>
+      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+
+      <!-- Terminal window -->
+      <div class="terminal-window" role="complementary" aria-label="Terminal contact interface">
+        <div class="terminal-titlebar">
+          <div class="tb-dot"></div>
+          <div class="tb-dot"></div>
+          <div class="tb-dot"></div>
+          <div class="tb-title">krish@portfolio — contact — zsh</div>
+        </div>
+        <div class="terminal-body" id="term-body">
+          <!-- Content injected by terminal.js -->
+        </div>
+      </div>
+
+      <!-- Footer bar -->
+      <div class="footer-bar">
+        <p>
+          Built with ❤️ by <strong>Siva Rama Krishna Reddy Padala</strong> &nbsp;·&nbsp;
+          <a href="https://github.com/Krish6115" target="_blank" rel="noopener">GitHub</a> &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/siva-rama-krishna-reddy-padala/" target="_blank"
+            rel="noopener">LinkedIn</a>
+        </p>
+        <p style="margin-top:8px;font-size:0.68rem;">© 2025 Krish6115 · All rights reserved</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════════════ -->
+  <script src="js/hero.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/competitive.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/spider-cursor.js"></script>
+
+  <!-- Profile image reveal on scroll -->
+  <script>
+    const profileWrapper = document.getElementById('profile-wrapper');
+    if (profileWrapper) {
+      const pIO = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            profileWrapper.style.opacity = '1';
+            profileWrapper.style.transform = 'scale(1)';
+            pIO.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      pIO.observe(profileWrapper);
+    }
+  </script>
+
+</body>
+
+</html>

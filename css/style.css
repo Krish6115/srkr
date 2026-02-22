@@ -1,0 +1,480 @@
+/* ============================================================
+   GLOBAL DESIGN SYSTEM – SRKR Portfolio
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
+
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --bg-primary: #020a02;
+  --bg-secondary: #040d04;
+  --bg-card: #071007;
+  --surface: rgba(0, 255, 65, 0.03);
+  --border: rgba(0, 255, 65, 0.1);
+  --border-glow: rgba(57, 255, 20, 0.4);
+
+  /* VS Code-inspired colour palette */
+  --green: #39ff14;
+  /* matrix / keyword green  – PRIMARY */
+  --green2: #00ff41;
+  /* bright lime accent */
+  --green3: #4ec9b0;
+  /* VS Code teal-green (type hints) */
+  --sky: #9cdcfe;
+  /* VS Code sky-blue (variables) */
+  --purple: #c586c0;
+  /* VS Code purple (imports/types) */
+  --orange: #ce9178;
+  /* VS Code orange (strings) */
+  --yellow: #dcdcaa;
+  /* VS Code yellow (functions) */
+  --pink: #f472b6;
+
+  /* Aliases for legacy references */
+  --cyan: var(--green);
+
+  --text-primary: #d4d4d4;
+  /* VS Code default text */
+  --text-secondary: #6a9955;
+  /* VS Code comment green */
+  --text-muted: #3e4e3e;
+
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-vt323: 'VT323', monospace;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-sans: 'VT323', monospace;
+  /* body uses VT323 – readable pixel */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  --shadow-glow-cyan: 0 0 40px rgba(57, 255, 20, 0.18);
+  --shadow-glow-green: 0 0 40px rgba(57, 255, 20, 0.22);
+  --shadow-glow-purple: 0 0 40px rgba(197, 134, 192, 0.18);
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(57, 255, 20, 0.2);
+  color: #d4d4d4;
+}
+
+
+/* ---------- Custom Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--green), var(--purple));
+  border-radius: 3px;
+}
+
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-pixel);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+/* VS Code gradient classes */
+.gradient-text {
+  background: linear-gradient(135deg, var(--green) 0%, var(--sky) 40%, var(--purple) 80%, var(--orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-green {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green3) 60%, var(--sky) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-orange {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--sky) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Syntax colouring helpers (VS Code style) */
+.vsc-keyword {
+  color: var(--green);
+}
+
+/* keywords */
+.vsc-string {
+  color: var(--orange);
+}
+
+/* strings */
+.vsc-function {
+  color: var(--yellow);
+}
+
+/* functions */
+.vsc-type {
+  color: var(--green3);
+}
+
+/* types */
+.vsc-variable {
+  color: var(--sky);
+}
+
+/* variables */
+.vsc-comment {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 0.02em;
+}
+
+
+/* ---------- Section Layout ---------- */
+section {
+  position: relative;
+  padding: 120px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green);
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section-label::before {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--green);
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+}
+
+.section-title {
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  line-height: 1.5;
+}
+
+/* ---------- Glass Card ---------- */
+.glass-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.glass-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow-green);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.08em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--green), var(--green3));
+  color: #000;
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.3);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--green3), var(--green));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 50px rgba(57, 255, 20, 0.5);
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.btn-ghost:hover {
+  border-color: var(--green);
+  color: var(--green);
+  box-shadow: var(--shadow-glow-green);
+  background: rgba(57, 255, 20, 0.05);
+}
+
+/* ---------- Neon Tag / Badge ---------- */
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  border: 1px solid;
+  letter-spacing: 0.06em;
+}
+
+.tag-cyan {
+  color: var(--green);
+  border-color: rgba(57, 255, 20, 0.3);
+  background: rgba(57, 255, 20, 0.06);
+}
+
+.tag-purple {
+  color: var(--purple);
+  border-color: rgba(197, 134, 192, 0.35);
+  background: rgba(197, 134, 192, 0.06);
+}
+
+.tag-green {
+  color: var(--green3);
+  border-color: rgba(78, 201, 176, 0.3);
+  background: rgba(78, 201, 176, 0.06);
+}
+
+.tag-orange {
+  color: var(--orange);
+  border-color: rgba(206, 145, 120, 0.3);
+  background: rgba(206, 145, 120, 0.06);
+}
+
+.tag-pink {
+  color: var(--yellow);
+  border-color: rgba(220, 220, 170, 0.3);
+  background: rgba(220, 220, 170, 0.06);
+}
+
+/* ---------- Glow Divider ---------- */
+.glow-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green), var(--green3), transparent);
+  margin: 0;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(5, 8, 18, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 40px;
+}
+
+.nav-logo {
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 400;
+  text-shadow: 0 0 14px rgba(57, 255, 20, 0.7);
+  letter-spacing: 0.05em;
+}
+
+.nav-logo span {
+  color: var(--sky);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: color var(--transition);
+  position: relative;
+  letter-spacing: 0.08em;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--green);
+  box-shadow: 0 0 6px var(--green);
+  transition: width var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--green);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Noise Texture Overlay ---------- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* ---------- Animated Background Blobs ---------- */
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  pointer-events: none;
+  animation: blobFloat 12s ease-in-out infinite alternate;
+}
+
+@keyframes blobFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(40px, 30px) scale(1.08);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .navbar.scrolled {
+    padding: 12px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

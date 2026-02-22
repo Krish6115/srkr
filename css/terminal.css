@@ -1,0 +1,174 @@
+/* ============================================================
+   TERMINAL FOOTER SECTION
+   ============================================================ */
+
+#terminal-footer {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+/* Centered terminal window */
+.terminal-window {
+    max-width: 720px;
+    margin: 0 auto;
+    border-radius: var(--radius-md);
+    background: #020c02;
+    border: 1px solid rgba(57, 255, 20, 0.2);
+    box-shadow: 0 0 80px rgba(57, 255, 20, 0.08), inset 0 0 60px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.terminal-window.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Title bar */
+.terminal-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border);
+}
+
+.tb-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.tb-dot:nth-child(1) {
+    background: #ff5f57;
+}
+
+.tb-dot:nth-child(2) {
+    background: #febc2e;
+}
+
+.tb-dot:nth-child(3) {
+    background: #28c840;
+}
+
+.tb-title {
+    flex: 1;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Terminal body */
+.terminal-body {
+    padding: 28px 28px 36px;
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    line-height: 2.2;
+    min-height: 320px;
+    background: #020c02;
+}
+
+/* Lines */
+.term-line {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.term-prompt {
+    color: #39ff14;
+    flex-shrink: 0;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+}
+
+.term-host {
+    color: #4ec9b0;
+    flex-shrink: 0;
+}
+
+.term-path {
+    color: #9cdcfe;
+    flex-shrink: 0;
+}
+
+.term-cmd {
+    color: #d4d4d4;
+}
+
+.term-output {
+    color: #6a9955;
+    padding-left: 0;
+}
+
+.term-output-line {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-secondary);
+    padding-left: 20px;
+}
+
+.term-output-line a {
+    color: #39ff14;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 0 0 6px rgba(57, 255, 20, 0.4);
+}
+
+.term-output-line a:hover {
+    opacity: 0.7;
+}
+
+.term-output-line .term-key {
+    color: var(--text-muted);
+    min-width: 90px;
+}
+
+/* Blinking cursor at end */
+.term-cursor {
+    display: inline-block;
+    width: 9px;
+    height: 1.2em;
+    background: #39ff14;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: cursorBlink 0.85s step-end infinite;
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+}
+
+/* Hidden initially, typed in via JS */
+.term-typed {
+    opacity: 0;
+}
+
+.term-typed.visible {
+    opacity: 1;
+}
+
+/* Copyright bar */
+.footer-bar {
+    text-align: center;
+    padding: 32px 20px 0;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 2;
+}
+
+.footer-bar a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+.footer-bar a:hover {
+    text-decoration: underline;
+}

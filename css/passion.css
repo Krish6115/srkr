@@ -1,0 +1,174 @@
+/* ============================================================
+   PASSION PROJECTS & CLIENT WORK – Horizontal Carousel
+   ============================================================ */
+
+#passion {
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Track that moves */
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px;
+    cursor: grab;
+}
+
+.carousel-track:active {
+    cursor: grabbing;
+}
+
+.carousel-track::-webkit-scrollbar {
+    height: 4px;
+}
+
+.carousel-track::-webkit-scrollbar-track {
+    background: var(--border);
+    border-radius: 2px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--green), var(--green3));
+    border-radius: 2px;
+}
+
+/* Individual cards */
+.passion-card {
+    flex: 0 0 340px;
+    scroll-snap-align: start;
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.passion-card:hover {
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-glow-green);
+}
+
+/* Card visual */
+.passion-card-visual {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--bg-card);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passion-card-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.passion-card:hover .passion-card-visual img {
+    transform: scale(1.05);
+}
+
+/* Placeholder visual */
+.passion-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.passion-placeholder .pp-icon {
+    font-size: 2.4rem;
+    opacity: 0.4;
+}
+
+/* Category chip */
+.passion-category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.1em;
+    backdrop-filter: blur(8px);
+}
+
+/* Card body */
+.passion-card-body {
+    padding: 22px;
+}
+
+.passion-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.passion-card-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.passion-card-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+/* Navigation arrows */
+.carousel-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition);
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.carousel-btn:hover {
+    border-color: var(--green);
+    color: var(--green);
+    box-shadow: var(--shadow-glow-green);
+    background: rgba(57, 255, 20, 0.05);
+}
+
+@media (max-width: 600px) {
+    .passion-card {
+        flex: 0 0 85vw;
+    }
+}
