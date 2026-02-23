@@ -57,6 +57,104 @@
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ---------- Light Mode Overrides ---------- */
+body.light-mode {
+  --bg-primary: #f0f4f0;
+  --bg-secondary: #e4ece4;
+  --bg-card: #d8e8d8;
+  --surface: rgba(0, 120, 40, 0.05);
+  --border: rgba(0, 120, 40, 0.18);
+  --border-glow: rgba(0, 140, 50, 0.35);
+
+  --green: #1a8a00;
+  --green2: #22a800;
+  --green3: #1a7a6e;
+  --sky: #1a6fa8;
+  --purple: #7b3f9e;
+  --orange: #8a4a1e;
+  --yellow: #7a7a22;
+  --pink: #a0286e;
+  --cyan: var(--green);
+
+  --text-primary: #1a2a1a;
+  --text-secondary: #2d6a2d;
+  --text-muted: #6a8a6a;
+
+  --shadow-glow-cyan: 0 0 40px rgba(0, 140, 50, 0.14);
+  --shadow-glow-green: 0 0 40px rgba(0, 140, 50, 0.18);
+  --shadow-glow-purple: 0 0 40px rgba(123, 63, 158, 0.14);
+}
+
+/* ---------- Jelly Toggle Button ---------- */
+.jelly-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1.5px solid var(--green);
+  background: linear-gradient(135deg,
+      rgba(57, 255, 20, 0.12) 0%,
+      rgba(78, 201, 176, 0.10) 100%);
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.15s, box-shadow 0.25s, background 0.3s;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.18),
+    inset 0 0 8px rgba(57, 255, 20, 0.06);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.jelly-toggle:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 22px rgba(57, 255, 20, 0.38),
+    inset 0 0 12px rgba(57, 255, 20, 0.10);
+}
+
+.jelly-toggle:active {
+  transform: scale(0.94);
+}
+
+/* pulsing glow ring */
+.jelly-toggle::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50px;
+  border: 1px solid rgba(57, 255, 20, 0.25);
+  animation: jellyPulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes jellyPulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.1;
+    transform: scale(1.06);
+  }
+}
+
+.jelly-toggle .jt-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+body.light-mode .jelly-toggle .jt-icon {
+  transform: rotate(180deg);
+}
+
 /* ---------- Reset & Base ---------- */
 *,
 *::before,
@@ -78,6 +176,7 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 ::selection {
