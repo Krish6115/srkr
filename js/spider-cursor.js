@@ -57,7 +57,7 @@
     /* ── Spawn one spider ── */
     function spawn() {
         /* 150 ambient dots (was 333 — halved for performance) */
-        const pts = many(350, () => ({
+        const pts = many(500, () => ({
             x: rnd(window.innerWidth),
             y: rnd(window.innerHeight),
             len: 0,
@@ -79,7 +79,7 @@
         const ky = rnd(0.5, 0.5);
         const walkX = rnd(50, 50);
         const walkY = rnd(50, 50);
-        const bodyR = window.innerWidth / rnd(200, 280);
+        const bodyR = window.innerWidth / rnd(100, 150);
 
         function paintDot(dot) {
             legTips.forEach((tip) => {
