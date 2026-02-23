@@ -57,17 +57,17 @@
     /* ── Spawn one spider ── */
     function spawn() {
         /* 150 ambient dots (was 333 — halved for performance) */
-        const pts = many(300, () => ({
+        const pts = many(150, () => ({
             x: rnd(window.innerWidth),
             y: rnd(window.innerHeight),
             len: 0,
             r: 0,
         }));
 
-        /* 8 leg-tip anchors arranged in a circle */
-        const legTips = many(8, (i) => ({
-            x: cos((i / 8) * PI * 2),
-            y: sin((i / 8) * PI * 2),
+        /* 9 leg-tip anchors arranged in a circle */
+        const legTips = many(9, (i) => ({
+            x: cos((i / 9) * PI * 2),
+            y: sin((i / 9) * PI * 2),
         }));
 
         const seed = rnd(100);
@@ -110,7 +110,7 @@
                     const len = hypot(dx, dy);
                     let r = min(2, window.innerWidth / len / 5);
 
-                    const near = len < window.innerWidth / 22 && activeCount < 8;
+                    const near = len < window.innerWidth / 10 && activeCount < 8;
                     const dir = near ? 0.1 : -0.1;
                     if (near) { r *= 1.5; activeCount++; }
 
@@ -131,10 +131,6 @@
     /* ── Track pointer globally, including during scroll ── */
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
-
-    /* ── Food dot — follows cursor much faster than spider ── */
-    let foodX = window.innerWidth / 2;
-    let foodY = window.innerHeight / 2;
 
     window.addEventListener('pointermove', (e) => {
         mouseX = e.clientX;
@@ -157,22 +153,6 @@
 
         const t = ts / 1000;
         spiders.forEach((s) => s.tick(t));
-
-        /* ── Draw food dot (faster cursor follower) ── */
-        foodX += (mouseX - foodX) / 3;
-        foodY += (mouseY - foodY) / 3;
-
-        /* Soft glow ring */
-        ctx.beginPath();
-        ctx.arc(foodX, foodY, 7, 0, PI * 2);
-        ctx.fillStyle = 'rgba(57,255,20,0.08)';
-        ctx.fill();
-
-        /* Bright core dot */
-        ctx.beginPath();
-        ctx.arc(foodX, foodY, 3.5, 0, PI * 2);
-        ctx.fillStyle = 'rgba(57,255,20,1)';
-        ctx.fill();
 
         requestAnimationFrame(anim);
     }
