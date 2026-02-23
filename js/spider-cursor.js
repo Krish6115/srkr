@@ -57,7 +57,7 @@
     /* ── Spawn one spider ── */
     function spawn() {
         /* 150 ambient dots (was 333 — halved for performance) */
-        const pts = many(150, () => ({
+        const pts = many(200, () => ({
             x: rnd(window.innerWidth),
             y: rnd(window.innerHeight),
             len: 0,
@@ -110,7 +110,7 @@
                     const len = hypot(dx, dy);
                     let r = min(2, window.innerWidth / len / 5);
 
-                    const near = len < window.innerWidth / 10 && activeCount < 8;
+                    const near = len < window.innerWidth / 22 && activeCount < 8;
                     const dir = near ? 0.1 : -0.1;
                     if (near) { r *= 1.5; activeCount++; }
 
