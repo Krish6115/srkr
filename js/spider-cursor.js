@@ -57,7 +57,7 @@
     /* ── Spawn one spider ── */
     function spawn() {
         /* 150 ambient dots (was 333 — halved for performance) */
-        const pts = many(400, () => ({
+        const pts = many(300, () => ({
             x: rnd(window.innerWidth),
             y: rnd(window.innerHeight),
             len: 0,
@@ -132,6 +132,10 @@
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
 
+    /* ── Food dot — follows cursor much faster than spider ── */
+    let foodX = window.innerWidth / 2;
+    let foodY = window.innerHeight / 2;
+
     window.addEventListener('pointermove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
@@ -153,6 +157,22 @@
 
         const t = ts / 1000;
         spiders.forEach((s) => s.tick(t));
+
+        /* ── Draw food dot (faster cursor follower) ── */
+        foodX += (mouseX - foodX) / 3;
+        foodY += (mouseY - foodY) / 3;
+
+        /* Soft glow ring */
+        ctx.beginPath();
+        ctx.arc(foodX, foodY, 7, 0, PI * 2);
+        ctx.fillStyle = 'rgba(57,255,20,0.08)';
+        ctx.fill();
+
+        /* Bright core dot */
+        ctx.beginPath();
+        ctx.arc(foodX, foodY, 3.5, 0, PI * 2);
+        ctx.fillStyle = 'rgba(57,255,20,1)';
+        ctx.fill();
 
         requestAnimationFrame(anim);
     }
