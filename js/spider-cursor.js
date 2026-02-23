@@ -57,17 +57,17 @@
     /* ── Spawn one spider ── */
     function spawn() {
         /* 150 ambient dots (was 333 — halved for performance) */
-        const pts = many(500, () => ({
+        const pts = many(400, () => ({
             x: rnd(window.innerWidth),
             y: rnd(window.innerHeight),
             len: 0,
             r: 0,
         }));
 
-        /* 9 leg-tip anchors arranged in a circle */
-        const legTips = many(9, (i) => ({
-            x: cos((i / 9) * PI * 2),
-            y: sin((i / 9) * PI * 2),
+        /* 8 leg-tip anchors arranged in a circle */
+        const legTips = many(8, (i) => ({
+            x: cos((i / 8) * PI * 2),
+            y: sin((i / 8) * PI * 2),
         }));
 
         const seed = rnd(100);
