@@ -79,7 +79,7 @@
         const ky = rnd(0.5, 0.5);
         const walkX = rnd(50, 50);
         const walkY = rnd(50, 50);
-        const bodyR = window.innerWidth / rnd(100, 150);
+        const bodyR = window.innerWidth / rnd(200, 280);
 
         function paintDot(dot) {
             legTips.forEach((tip) => {
@@ -125,8 +125,8 @@
         };
     }
 
-    /* ── Two spiders ── */
-    const spiders = many(2, spawn);
+    /* ── One spider ── */
+    const spiders = many(1, spawn);
 
     /* ── Track pointer globally, including during scroll ── */
     let mouseX = window.innerWidth / 2;
