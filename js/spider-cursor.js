@@ -57,7 +57,7 @@
     /* ── Spawn one spider ── */
     function spawn() {
         /* 150 ambient dots (was 333 — halved for performance) */
-        const pts = many(200, () => ({
+        const pts = many(350, () => ({
             x: rnd(window.innerWidth),
             y: rnd(window.innerHeight),
             len: 0,
